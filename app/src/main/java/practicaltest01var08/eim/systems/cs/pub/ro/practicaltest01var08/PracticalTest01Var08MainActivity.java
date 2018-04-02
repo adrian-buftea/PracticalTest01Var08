@@ -53,5 +53,25 @@ public class PracticalTest01Var08MainActivity extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(), "The activity returned with result " + resultCode,
 //                    Toast.LENGTH_LONG).show();
         }
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("riddle", riddle.getText().toString());
+        savedInstanceState.putString("answer", answer.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        if (savedInstanceState.containsKey("riddle")) {
+            riddle.setText(savedInstanceState.getString("riddle"));
+        }
+        if (savedInstanceState.containsKey("answer")) {
+            answer.setText(savedInstanceState.getString("answer"));
+        }
     }
 }

@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Practicaltest01Var08PlayActivity"></activity>
+        <activity android:name=".Practicaltest01Var08PlayActivity" />
+
+        <service
+            android:name=".PracticalTest01Var08Service"
+            android:enabled="true"
+            android:exported="false"></service>
     </application>
 
 </manifest>

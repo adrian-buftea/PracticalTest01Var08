@@ -14,12 +14,14 @@
 
         <EditText
             android:id="@+id/riddle"
+            android:saveEnabled="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
         <EditText
             android:id="@+id/answer"
+            android:saveEnabled="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
